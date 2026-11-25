@@ -1,0 +1,45 @@
+{
+  "name": "scopeproof",
+  "version": "1.0.0",
+  "description": "Turn a product brief into a checked, signed-off build plan. A model drafts; shared rules check; a second person approves.",
+  "scripts": {
+    "dev": "concurrently -k -n api,web \"CLIENT_DIR=none DB_FILE=dev.db tsx watch src/server/index.ts\" \"vite\"",
+    "build": "vite build && esbuild src/server/index.ts --bundle --platform=node --format=esm --packages=external --target=node22 --outfile=dist/server/index.js",
+    "start": "node dist/server/index.js",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run"
+  },
+  "author": "Barnabas Olugbogi",
+  "license": "MIT",
+  "type": "module",
+  "dependencies": {
+    "@fastify/static": "^8.3.0",
+    "better-sqlite3": "^11.10.0",
+    "fastify": "^5.12.8",
+    "zod": "^3.25.76"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^9.6.0",
+    "@types/node": "^22.20.7",
+    "@types/react": "^19.3.3",
+    "@types/react-dom": "^19.3.0",
+    "@vitejs/plugin-react": "^4.7.0",
+    "concurrently": "^10.0.7",
+    "esbuild": "^0.25.12",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "tsx": "^4.23.15",
+    "typescript": "^5.9.3",
+    "vite": "^6.4.6",
+    "vitest": "^3.2.7"
+  },
+  "allowScripts": {
+    "better-sqlite3@11.10.0": true,
+    "esbuild@0.28.2": true,
+    "esbuild@0.25.12": true
+  },
+  "private": true,
+  "engines": {
+    "node": ">=22"
+  }
+}
