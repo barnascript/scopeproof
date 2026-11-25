@@ -1,5 +1,7 @@
 # Scopeproof
 
+**Live demo:** https://scopeproof-dhyo.onrender.com (free plan, so the first load can take about a minute)
+
 Turn a product brief into a build plan you can trust. A model drafts the stories. The same checks run in the browser and on the server. A second person signs off. Then the plan is locked.
 
 I built this because it is the part of AI-assisted work I care about most: the model is quick at the first draft, and it is also confident when it is wrong. So I wanted a tool where it is clear what the model wrote, what a person checked, and what nobody can change any more.
